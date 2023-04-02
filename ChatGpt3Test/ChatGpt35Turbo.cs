@@ -8,11 +8,11 @@ public static class ChatGpt35Turbo
         var request = new HttpRequestMessage
         {
             Method = HttpMethod.Post,
-            RequestUri = new Uri(Env.url),
+            RequestUri = new Uri(Envs.URL),
             Headers =
             {
-                { "OpenAI-Organization", Env.orgId },
-                { "Authorization", $"Bearer {Env.apiKey}" },
+                { "OpenAI-Organization", Envs.ORG_ID },
+                { "Authorization", $"Bearer {Envs.API_KEY}" },
             },
             Content = new StringContent(chatGpt3Request.ToString())
             {
